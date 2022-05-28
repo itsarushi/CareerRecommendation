@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import pickle
-career = pd.read_csv('dataset9000.csv', header = None)
+career = pd.read_csv('/Applications/XAMPP/xamppfiles/htdocs/crs/dataset9000.csvi', header = None)
 #np.dtype('float64')
 
 X = np.array(career.iloc[:, 0:17]) #X is skills

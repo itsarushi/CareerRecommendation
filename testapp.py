@@ -5,7 +5,7 @@ import numpy as np
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/predict')
 def career():
     return render_template("hometest.php")
 

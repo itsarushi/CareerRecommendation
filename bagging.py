@@ -3,20 +3,19 @@ from sklearn.ensemble import BaggingClassifier
 from sklearn.tree import DecisionTreeClassifier
 import pandas as pd
 import numpy as np
-import pickle
   
 # load the data
-dataset = pd.read_csv('dataset9000.csv', header = None)
+dataset = pd.read_csv('/Applications/XAMPP/xamppfiles/htdocs/crs/dataset9000.csv', header = None)
 print(dataset.head())
-X=np.array(dataset.iloc[:, 0:17]) 
+array = dataset.values
+X = array[:, 0:17]
 print(X)
-Y = np.array(dataset.iloc[:, 17])
-print(Y)
+Y = array[:, 17]
+print(Y) 
 dataset.columns= ["Database Fundamentals","Computer Architecture","Distributed Computing Systems",
 "Cyber-Security","Networking","Development","Programming Skills","Project Management",
 "Computer Forensics Fundamentals","Technical Communication","AI ML","Software Engineering","Business Analysis",
 "Communication skills","Data Science","Troubleshooting-skills","Graphics Designing","Roles"]
-dataset.dropna(how ='all', inplace = True)
 
   
 seed =5 
@@ -35,5 +34,7 @@ model = BaggingClassifier(base_estimator = base_cls,
                           random_state = seed)
   
 results = model_selection.cross_val_score(model, X, Y, cv = kfold)
-print("accuracy :",results.mean()*100)
+print("accuracy :")
+print(results.mean()*100)
+
 
