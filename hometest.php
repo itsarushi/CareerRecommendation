@@ -30,11 +30,16 @@ session_start();
 		<!-- /Hero-area -->
 
 <body>
+	<style>
+		body{
+			background-color: rgb(207, 159, 255);
+		}
+	</style>	
     <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
         <div class="wrapper wrapper--w790">
             <div class="card card-5">
                 <div class="card-heading">
-                    <h2 class="title">Rate Yourself!</h2>
+                    <center><h2 class="title">Rate Yourself!</h2></center>
 				
                 </div>
 				
@@ -301,7 +306,7 @@ session_start();
 						    </div>
 							
                 </div>
-                <center><button class="btn btn--radius-2 btn--red" type="submit" href = "http://localhost/crs/templates/testafter.php">Discover Yourself!</button></center>
+                <center><button class="btn btn--radius-2 btn--red" type="submit" href = "testafter.php">Discover Yourself!</button></center>
                 </div>						
 				</div>
 </div>		
